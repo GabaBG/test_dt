@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/bazy_danych_zelent.css" />
+  </head>
+  <body>
+    <div class="page">
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="#"><i class="bi bi-filetype-sql"></i></a>
+          </li>
+          <li><a href="#basics">Podstawy</a></li>
+          <li><a href="#about">lol</a></li>
+          <li><a href="#services">w</a></li>
+          <li><a href="#contact">g</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section id="basics" class="first-steps">
+          <h1 class="database-explain">Czym są bazy danych?</h1>
+          <p class="paragraph-one">
+            Bazy danych to w skrócie zbiór jakiś danych informacji, które są
+            porządnie uporządkowane. Znajdują się tam między innymi nasze
+            loginy, hasła, maile, nazwiska czy posty.
+            <span class="span-one">Przykładowo</span>, w bazie szkolnej
+            biblioteki znajdują się imiona i nazwiska uczniów, książki,
+            wypożyczenia itp.
+          </p>
+
+          <h2 style="padding-top: 30px">
+            Jak uporządkowane są dane w bazach danych?
+          </h2>
+          <p>Bazy danych składają się z tabel, a tabele z kolumn</p>
+
+          <h2 style="padding-top: 30px">Pierwsze pojęcia</h2>
+          <p>
+            <span class="span-one">Rekord (krotka)</span> - Pojedynczy wiersz w
+            tabeli np, zestaw cech danego ucznia. Rekord nie musi zawierać
+            wszystkich cech danego obiektu np. ucznia
+          </p>
+          <p>
+            <span class="span-one">Pole</span> - część tabeli przechowująca
+            jednostkowe dane np. nazwisko ucznia
+          </p>
+
+          <h2 style="padding-top: 30px">Pierwszy problem</h2>
+          <p>
+            Jeżeli chcemy uniknąć duplikowania się rekordków i zastanawiania się
+            na przykładzie biblioteki, który konkretny egzemplarz książki ma
+            uczeń wystarczy ponumerować książki za pomocą id. Id może być tylko
+            jedno. W żargonie Baz danych na id mówi się primary key.
+          </p>
+
+          <h2 style="padding-top: 30px">Czym jest primary key?</h2>
+          <p>
+            Primary key to jedno lub więcej pól, których wartość jednoznacznie
+            identyfikuje każdy rekord w tabeli. Taka cecha klucza nazywana jest
+            unikatowością
+          </p>
+
+          <h2 style="padding-top: 30px">
+            Redundancja i relacyjny model baz danych
+          </h2>
+          <p>
+            Redundancja to powtarzanie się danych w tabelach baz danych. Jest to
+            zjawisko nieporządane, któego chcemy unikać. Stąd też przy tworzeniu
+            przykładowo tabeli z wypożyczeniami nie wpisujemy ponownie imion i
+            nazwisk oraz książek, tylko wpisujemy id ucznia i id książki.
+            <span class="span-one">Przykładowa tabela</span>
+          </p>
+
+          <div class="tables-one">
+            <table class="database-model-one">
+              <tr>
+                <td><p>ID ucznia</p></td>
+                <td><p>imię</p></td>
+                <td><p>nazwisko</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+            </table>
+
+            <table class="database-model-one dm-two">
+              <tr>
+                <td><p>ID ucznia</p></td>
+                <td><p>imię</p></td>
+                <td><p>nazwisko</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+            </table>
+
+            <table class="database-model-one dm-three">
+              <tr>
+                <td><p>ID ucznia</p></td>
+                <td><p>imię</p></td>
+                <td><p>nazwisko</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+              <tr>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+                <td><p>zakola</p></td>
+              </tr>
+            </table>
+            <section class="first-prompts">
+              <div class="first-prompts-container">
+                <h1>Pierwsze prompty</h1>
+                <p>
+                  Najpierw należy się dostać do
+                  <span class="span-one">PHPmyadmin</span>. Aby to zrobić należy
+                  najpierw zainstalować xampp, włączyć usługi apache i mySQL, a
+                  następnie wpisać w przeglądarce adres
+                  <span class="span-one">127.0.0.1/phpmyadmin</span>. Wówczas
+                  dostaniemy się do narzędzia umożliwiającego proste zarządzanie
+                  bazami danych w mySQL
+                </p>
+
+                <h2>Utworzenie bazy danych</h2>
+                <img
+                  class="img-one"
+                  src="./img/Zrzut ekranu (22).png"
+                  alt="utworzenie bazy danych"
+                />
+                <p>
+                  Przykładowo dla strony z pytaniami na egzamin w technikum
+                  informatycznym utworzymy 7 kolumn ze względu na konieczność
+                  posiadania ID, treści pytania, 4 odpowiedzi i poprawnej
+                  odpowiedzi.
+                </p>
+                <p>
+                  Aby uczynić z pola klucz podstawowy należy zmienić index na
+                  primary
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/bazy_danych_zelent.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
